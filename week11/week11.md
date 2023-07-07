@@ -164,7 +164,7 @@ $$
 
 找到相关影片：
 
-对于每一步电影$$x_i$$，我们寻找另一部电影$x^{(j)}$，依据两部电影的特征向量之间的距离$\left\| {{x}^{(i)}}-{{x}^{(j)}} \right\|$的大小排序。如图所示，选出距离最小的5个作为我们推荐的电影。
+对于每一步电影$x_i$，我们寻找另一部电影$x^{(j)}$，依据两部电影的特征向量之间的距离$\left\| {{x}^{(i)}}-{{x}^{(j)}} \right\|$的大小排序。如图所示，选出距离最小的5个作为我们推荐的电影。
 
 ![img](https://github.com/zhangruiouc/Coursera-ML-AndrewNg-Notes/raw/master/images/0a8b49da1ab852f2996a02afcaca2322.png)
 
