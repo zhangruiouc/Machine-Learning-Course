@@ -259,44 +259,44 @@ $$
 
 如图所示为我们的推荐系统学习参数的示意图。在协同过滤算法中，我们需要同时学习$w^{(j)}$，$b^{(j)}$和$x^{(i)}$。
 
-![image-20230707153111223](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230707153111223.png)
+![image](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/f269d791-bcad-4fb8-963c-9f29fad0801a)
 
 但我们获取到了学习后的参数，就可以用来预测某个用户对某部电影的打分。
 
-![image-20230707153553979](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230707153553979.png)
+![image](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/10d1a9c0-bf9d-4e96-8b2c-40a7445e770f)
 
 #### 代码部分
 
 **第一步**，先编写损失函数的代码。损失函数用$J$来表示。在计算损失函数的过程中，我们分为两种情况，第一种没有**regularization term**，或者可以理解为**λ**为0。第二种是添加了**regularization term**的情况。
 
-![image-20230707154325241](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230707154325241.png)
+![image](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/9545caf4-8975-4f0e-b236-821e62cc1956)
 
 **第二步**，在如图所示的红框中，调用定义好的损失函数来计算$J$并打印，两种计算$J$的方法得到的结果与预期的数值相等。
 
-![image-20230707155203958](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230707155203958.png)
+![image](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/07dade78-072a-4f66-acbc-ed0ba7e1b863)
 
 **第三步**，我们使用**Vectorized Implementation**的方法来代替原来的**non-vectorized version**。
 
 使用**Vectorized Implementation**的方法可以得到原来的预期结果。
 
-![image-20230707155453823](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230707155453823.png)
+![image](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/9f793871-403a-4b9e-b469-ddebfd0adeda)
 
 **第四步**，利用算法来训练模型，以此达到电影推荐的目的。我们先选择一些我们感兴趣的电影，以及一些我们不喜欢的电影，并且分别给出评分。
 
-![image-20230707155757247](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230707155757247.png)
+![image](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/bad1063d-9492-4ac7-925f-6b033ce790e4)
 
 **第五步**，加载$Y$和$R$矩阵，并往其中添加新的评分。同时对数据集做归一化处理。
 
-![image-20230707155932506](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230707155932506.png)
+![image](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/2c621323-1f4b-4a75-a660-7e135c347662)
 
-**第五步**，初始化参数并选择**Adam**算法。
+**第六步**，初始化参数并选择**Adam**算法。
 
 ![image-20230707160139141](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230707160139141.png)
 
-**第六步**，开始训练模型。选择迭代的次数为200次
+**第七步**，开始训练模型。选择迭代的次数为200次
 
-![image-20230707160336381](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230707160336381.png)
+![image](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/de93d2d4-d517-4f8c-86ef-e5165c0ff5b9)
 
-**第六步**，计算每一个用户对每一个电影的评分。
+**第八步**，计算每一个用户对每一个电影的评分。
 
-![image-20230707160505714](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230707160505714.png)
+![image](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/2e83e0fe-011a-4505-bf93-83956a5dd3c8)
