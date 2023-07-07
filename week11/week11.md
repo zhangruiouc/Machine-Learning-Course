@@ -211,7 +211,7 @@ $$
 ### 小批量梯度下降
 
 小批量梯度下降算法是介于批量梯度下降算法和随机梯度下降算法之间的算法，每计算常数$b$次训练实例，便更新一次参数  ${{\theta }}$ 。
-![image-20230707143645638](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230707143645638.png)
+![image](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/14ffa986-077c-4cca-9ff3-49921d13bc37)
 
 ###  随机梯度下降收敛
 
