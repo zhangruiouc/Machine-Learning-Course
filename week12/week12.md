@@ -39,24 +39,21 @@
 
 例如，我们有400个训练实例，我们可以将批量梯度下降的求和任务分配给4台计算机进行处理：
 
-  ![image-20230714151333208](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230714151333208.png)
+![image](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/46471ddc-e304-40b0-a9f4-6e50c2073682)
 
 映射简化的应用还包括将一个任务分配给一台主机的CPU上的多个核心，让各核心并行处理数据。这种方法相对于将任务分配给多个主机的映射来说，减少了网络的延迟。
 
-![image-20230714151500743](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230714151500743.png)
+![image](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/d6c7add1-926a-42c6-9651-53aaf8ec49d1)
 
 很多高级的线性代数函数库已经能够利用多核**CPU**的多个核心来并行地处理矩阵运算，这也是算法的向量化实现如此重要的缘故（比调用循环快）。
 
-十八、应用实例：图片文字识别(Application Example: Photo OCR)
-------------------------------------------------------------
+映射化简和数据并行的一个应用就包括接下来涉及的**图片文字识别(Application Example: Photo OCR)**。
 
-### 18.1 问题描述和流程图
-
-参考视频: 18 - 1 - Problem Description and Pipeline (7 min).mkv
+### 问题描述和流程图
 
 图像文字识别应用所作的事是，从一张给定的图片中识别文字。这比从一份扫描文档中识别文字要复杂的多。
 
-![](../images/095e4712376c26ff7ffa260125760140.jpg)
+![095e4712376c26ff7ffa260125760140](https://github.com/zhangruiouc/Machine-Learning-Course/assets/130215873/258f9d2b-1d6e-4c8e-aa03-68588af2647b)
 
 为了完成这样的工作，需要采取如下步骤：
 
